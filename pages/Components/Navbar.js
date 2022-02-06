@@ -12,7 +12,7 @@ export default function Navbar() {
         </div>
 
         <div
-          className={`block ${isOpen ? "hidden" : "block"}`}
+          className={` cursor-pointer block ${isOpen ? "hidden" : "block"}`}
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -20,7 +20,7 @@ export default function Navbar() {
           Menu
         </div>
         <div
-          className={`block ${!isOpen ? "hidden" : "block"}`}
+          className={`block cursor-pointer ${!isOpen ? "hidden" : "block"}`}
           onClick={() => {
             setIsOpen(!isOpen);
           }}
@@ -28,8 +28,8 @@ export default function Navbar() {
           Close
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"}`}>
-        <ul className="flex flex-col space-y-2 text-center">
+      <div className={` ${isOpen ? "block" : "hidden"}`}>
+        <ul className="flex flex-col space-y-4 mt-4 text-center">
           <NavItem text="Home" href="/" />
           <NavItem text="About" href="/about" />
           <NavItem text="Blog" href="/blog" />
